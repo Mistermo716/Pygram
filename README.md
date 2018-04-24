@@ -17,3 +17,10 @@ Back End
 * Flask or Django
 * PyMongo
 * MongoDB
+
+## Minimum Value Product
+
+* Must be able to upload pictures.
+* Pictures from database must be viewable in feed.
+* Posts must be interactive with likes and comments
+* JWT Auth for users if I am able to get to this point (1 week project short time to learn and implement)
