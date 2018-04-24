@@ -14,6 +14,6 @@ Front End
 Back End
 
 * Python
-* Flash or Django
+* Flask or Django
 * PyMongo
 * MongoDB
