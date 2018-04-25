@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  position: relative;
+  top: 8px;
+  height: 40px;
+  width: 40px;
+  margin: 0px;
+  left: 10px;
+}
+.navbar {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid rgba(46, 43, 43, 0.185);
+}
+.logo-divider {
+  position: relative;
+  font-weight: 300;
+  font-size: 40px;
+  left: 20px;
+}
+.pygram {
+  left: 20px;
+  top: 0px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 30px;
+  bottom: 10px;
+}
+.login {
+  position: relative;
+  float: right;
+  font-size: 20px;
+  padding: 20px;
+  color: black;
+}
