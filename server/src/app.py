@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from bson import json_util, ObjectId
 from flask_cors import CORS
+import os
 import json
 from common.database import Database
 from comments import Comment
@@ -74,4 +75,9 @@ def create_new_comment():
     return jsonify(get_comments(photo_id))
 
 
-app.run(port=8080)
+if __name__ == "__main__":
+    try:
+        app.run(host=os.environ.get('IP', ''),
+                port=int(os.environ.get('PORT', '8080')))
+    except:
+        raise
