@@ -35,7 +35,8 @@ class Photo(object):
             'username': self.username,
             'url': self.url,
             'description': self.description,
-            'id': self.id
+            'id': self.id,
+            'date': self.date
         }
 
     @classmethod
