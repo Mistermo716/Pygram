@@ -5,9 +5,10 @@ from comments import Comment
 
 
 class Photo(object):
-    def __init__(self, username, url, description, id=None):
+    def __init__(self, username, url, description, date=datetime.datetime.utcnow(),  id=None):
         self.username = username
         self.url = url
+        self.date = date
         self.description = description
         self.id = uuid.uuid4().hex if id is None else id
 

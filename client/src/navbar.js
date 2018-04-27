@@ -8,18 +8,18 @@ class Navbar extends React.Component {
       <div className="navbar">
         <ul>
           <li>
-            <a href="">
+            <a href="/">
               <img className="logo" src={logo} alt="Python logo" />
             </a>
           </li>
           <span className="logo-divider">|</span>
           <li>
-            <a className="pygram" href="">
+            <a className="pygram" href="/">
               Pygram
             </a>
           </li>
           <li className="login">
-            <a href="">Login</a>
+            <a href="photosubmit">Pic Submit</a>
           </li>
         </ul>
       </div>

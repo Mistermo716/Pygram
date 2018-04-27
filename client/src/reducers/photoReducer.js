@@ -5,13 +5,14 @@ import thunk from 'redux-thunk';
 const initialState = {
   items: [],
   item: {},
+  submitted: false,
 };
 
 const formsReducer = (state = initialState, action) => {
   console.log('photo reducer submit called');
   switch (action.type) {
     case SUBMIT_PHOTO: {
-      state = { ...state, item: action.payload };
+      state = { ...state, item: action.payload, submitted: true };
       break;
     }
     default: {

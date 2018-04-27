@@ -1,0 +1,50 @@
+.sub-container {
+  padding: 20px;
+  margin: auto;
+  width: 60%;
+  margin-top: 10%;
+  height: 310px;
+  border: 2px solid rgba(0, 0, 0, 0.144);
+}
+.sub-description {
+  position: relative;
+  left: 10%;
+  width: 75%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  margin-bottom: 20px;
+}
+.sub-username {
+  position: relative;
+  left: 10%;
+  width: 75%;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  margin-bottom: 20px;
+}
+.sub-button {
+  position: relative;
+  left: 25%;
+  height: 30px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+}
+.img-url {
+  position: relative;
+  left: 10%;
+  width: 75%;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  margin-bottom: 20px;
+}
+label {
+  position: relative;
+  margin: 10px;
+}

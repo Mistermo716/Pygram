@@ -11,8 +11,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="app">
           <Route path="/" component={Navbar} />
-          <Route path="/" component={Photocards} />
-          <Route path="/photosubmit" component={PhotoForm} />
+          <Route exact path="/" component={Photocards} />
+          <Route exact path="/photosubmit" component={PhotoForm} />
         </div>
       </BrowserRouter>
     );

@@ -31,3 +31,23 @@ export const submitPhoto = submitData => dispatch => {
       })
     );
 };
+
+export const GET_COMMENTS = 'GET_COMMENTS';
+export const getComments = comment => dispatch => {
+  console.log('post action called');
+  fetch(`${API_BASE_URL}/photos/new`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify(comment),
+  })
+    .then(res => res.json())
+    .then(data =>
+      dispatch({
+        type: SUBMIT_PHOTO,
+        payload: data,
+      })
+    );
+};

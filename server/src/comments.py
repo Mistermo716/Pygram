@@ -26,12 +26,11 @@ class Comment(object):
             'date': self.date
         }
 
+    def from_blog(self):
+        return [comment for comment in Database.find(collection='comments', query={'photo_id': self.photo_id})]
+
     @classmethod
     def from_mongo(cls, id):
         comment_data = Database.find_one(
             collection='comments', query={'id': id})
         return cls(**comment_data)
-
-    @staticmethod
-    def from_blog(id):
-        return [comment for comment in Database.find(collection='comments', query={'photo_id': id})]

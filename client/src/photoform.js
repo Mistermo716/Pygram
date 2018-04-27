@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { submitPhoto } from './actions/index';
+import './photoform.css';
 class PhotoForm extends React.Component {
   constructor(props) {
     super(props);
@@ -34,15 +35,15 @@ class PhotoForm extends React.Component {
   render() {
     const reviewSubmit =
       this.props.form.submitted !== false
-        ? 'Your review has been submitted'
+        ? 'Your Photo has been submitted'
         : undefined;
     return (
-      <form className="reviewsub-container" onSubmit={this.onSubmit}>
+      <form className="sub-container" onSubmit={this.onSubmit}>
         <h3>{reviewSubmit}</h3>
         <div>
           <label>Enter Your Username</label> <br />
           <input
-            className="product-name"
+            className="sub-username"
             name="username"
             type="text"
             onChange={this.onChange}
@@ -53,7 +54,7 @@ class PhotoForm extends React.Component {
         <div>
           <label>Description</label> <br />
           <textarea
-            className="reviewsub-textarea"
+            className="sub-description"
             name="description"
             type="textarea"
             onChange={this.onChange}
@@ -72,7 +73,9 @@ class PhotoForm extends React.Component {
         </div>
         <div>
           <br />
-          <button type="submit">Submit</button>
+          <button className="sub-button" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     );

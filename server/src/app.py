@@ -27,8 +27,6 @@ def get_photos():
             if key != '_id':
                 item[key] = photo[key]
         if len(newArr) < len(photos):
-            print('photos: ', len(photos))
-            print('newArr: ', len(newArr))
             newArr.append(item)
         item = {}
 
@@ -46,17 +44,20 @@ def create_new_photo():
     return jsonify(photo)
 
 
-@app.route('/comments')
-def get_comments(photo_id):
+@app.route('/comments', methods=['POST', 'GET'])
+def get_comments():
+    photo_id = request['photo_id']
     item = {}
     newArr = []
     photo = Photo.from_mongo(photo_id)
-    comments = photo.get_comments()
+    comments = photo.from_blog(photo_id)
     for comment in comments:
-        for key in comment:
+        for key in photo:
             if key != '_id':
                 item[key] = comment[key]
-    newArr.append(item)
+        if len(newArr) < len(comments):
+            newArr.append(item)
+        item = {}
 
     return jsonify(newArr)
 

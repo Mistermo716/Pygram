@@ -14,7 +14,7 @@ class Photocards extends React.Component {
       return (
         <li className="card-container" key={photo.id}>
           <div>
-            <h3>{photo.username}</h3>
+            <h3>{photo.username}</h3> <span>{photo.date}</span>
             <img alt="product" src={photo.url} />
             <p>{photo.description}</p>
           </div>
